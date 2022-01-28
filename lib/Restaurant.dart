@@ -6,36 +6,15 @@ import "package:google_fonts/google_fonts.dart";
 import "./Components/restaurantItemCard.dart";
 
 class Restaurant extends StatefulWidget {
-  Restaurant(
-      {Key? key,
-      this.name = "test",
-      this.description = "",
-      this.image = "assets/burger.png",
-      this.color = Colors.red})
-      : super(key: key);
-
-  final String name;
-  final String description;
-  final String image;
-  final Color color;
+  Restaurant({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  State<Restaurant> createState() => _RestaurantState(
-      name: name, description: description, image: image, color: color);
+  State<Restaurant> createState() => _RestaurantState();
 }
 
 class _RestaurantState extends State<Restaurant> {
-  final String name;
-  final String description;
-  final String image;
-  final Color color;
-
-  _RestaurantState(
-      {this.name = "",
-      this.description = "",
-      this.image = "",
-      this.color = Colors.white});
-
   @override
   Widget build(BuildContext context) {
     double dWidth = MediaQuery.of(context).size.width;
@@ -52,6 +31,9 @@ class _RestaurantState extends State<Restaurant> {
     adjustedSize(double size) {
       return (((size * dWidth) / 375) + ((size * dHeight) / 667)) / 2;
     }
+
+    final args =
+        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
 
     return Scaffold(
         appBar: AppBar(
@@ -108,7 +90,7 @@ class _RestaurantState extends State<Restaurant> {
                 height: adjustedHeight(200),
                 width: adjustedWidth(375),
                 decoration: BoxDecoration(
-                    color: Colors.orange[100],
+                    color: args["color"],
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(adjustedSize(20)),
                         bottomRight: Radius.circular(adjustedSize(20)))),
@@ -118,7 +100,7 @@ class _RestaurantState extends State<Restaurant> {
                       bottom: 0,
                       right: 0,
                       child: Image(
-                        image: AssetImage("assets/burger.png"),
+                        image: AssetImage(args["image"]),
                         height: adjustedHeight(140),
                       ),
                     ),
@@ -169,14 +151,14 @@ class _RestaurantState extends State<Restaurant> {
                                   )),
                               SizedBox(height: adjustedHeight(5)),
                               Text(
-                                "Joe's Burger",
+                                args["name"],
                                 style: TextStyle(
                                     fontSize: adjustedSize(35),
                                     fontWeight: FontWeight.bold),
                               ),
                               SizedBox(height: adjustedHeight(5)),
                               Text(
-                                "Premium Quality Burgers",
+                                args["description"],
                                 style: GoogleFonts.dancingScript(
                                     textStyle: TextStyle(
                                         fontSize: adjustedSize(20),

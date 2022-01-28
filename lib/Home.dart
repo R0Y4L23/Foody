@@ -177,10 +177,10 @@ class _HomeState extends State<Home> {
                           onTap: () {
                             Navigator.pushNamed(context, '/restaurant',
                                 arguments: {
-                                  'name': "Joes's Burger",
-                                  'image': "assets/burger.png",
-                                  'description': "Good Quality Burgers",
-                                  'color': Colors.green.shade100,
+                                  'name': "Mario's Pizza",
+                                  'image': "assets/pizza.png",
+                                  'description': "Best Pizzas",
+                                  'color': Colors.orange.shade100,
                                 });
                           },
                         ),
@@ -193,10 +193,10 @@ class _HomeState extends State<Home> {
                           onTap: () {
                             Navigator.pushNamed(context, '/restaurant',
                                 arguments: {
-                                  'name': "Joes's Burger",
-                                  'image': "assets/burger.png",
-                                  'description': "Good Quality Burgers",
-                                  'color': Colors.green.shade100,
+                                  'name': "Sushi Time",
+                                  'image': "assets/sushi.png",
+                                  'description': "Taste the best",
+                                  'color': Colors.yellow.shade100,
                                 });
                           },
                         ),
@@ -209,10 +209,10 @@ class _HomeState extends State<Home> {
                           onTap: () {
                             Navigator.pushNamed(context, '/restaurant',
                                 arguments: {
-                                  'name': "Joes's Burger",
-                                  'image': "assets/burger.png",
-                                  'description': "Good Quality Burgers",
-                                  'color': Colors.green.shade100,
+                                  'name': "Salad Place",
+                                  'image': "assets/salad.png",
+                                  'description': "Eat Tasty Salads",
+                                  'color': Colors.purple.shade100,
                                 });
                           },
                         ),
@@ -229,10 +229,10 @@ class _HomeState extends State<Home> {
                           onTap: () {
                             Navigator.pushNamed(context, '/restaurant',
                                 arguments: {
-                                  'name': "Joes's Burger",
-                                  'image': "assets/burger.png",
-                                  'description': "Good Quality Burgers",
-                                  'color': Colors.green.shade100,
+                                  'name': "Namaste Inn",
+                                  'image': "assets/curry.png",
+                                  'description': "Best Indian Food",
+                                  'color': Colors.pink.shade100,
                                 });
                           },
                         ),
@@ -245,10 +245,10 @@ class _HomeState extends State<Home> {
                           onTap: () {
                             Navigator.pushNamed(context, '/restaurant',
                                 arguments: {
-                                  'name': "Joes's Burger",
-                                  'image': "assets/burger.png",
-                                  'description': "Good Quality Burgers",
-                                  'color': Colors.green.shade100,
+                                  'name': "Noodle Doodle",
+                                  'image': "assets/noodle.png",
+                                  'description': "Eat everyday",
+                                  'color': Colors.blue.shade100,
                                 });
                           },
                         ),
@@ -261,10 +261,10 @@ class _HomeState extends State<Home> {
                           onTap: () {
                             Navigator.pushNamed(context, '/restaurant',
                                 arguments: {
-                                  'name': "Joes's Burger",
-                                  'image': "assets/burger.png",
-                                  'description': "Good Quality Burgers",
-                                  'color': Colors.green.shade100,
+                                  'name': "Taco Bell",
+                                  'image': "assets/taco.png",
+                                  'description': "Best Mexican Food",
+                                  'color': Colors.red.shade100,
                                 });
                           },
                         ),
