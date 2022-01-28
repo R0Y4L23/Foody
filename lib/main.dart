@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import "./Home.dart";
 import "./Restaurant.dart";
-import "./Food.dart";
 
 void main() {
   runApp(Start());
@@ -25,7 +24,6 @@ class _StartState extends State<Start> {
       routes: {
         "/home": (context) => Home(),
         "/restaurant": (context) => Restaurant(),
-        "/food": (context) => Food(),
       },
     );
   }

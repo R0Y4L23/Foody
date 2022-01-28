@@ -156,6 +156,15 @@ class _HomeState extends State<Home> {
                           cardColor: Colors.green.shade100,
                           name: "Joes's Burger",
                           description: "Good Quality Burgers",
+                          onTap: () {
+                            Navigator.pushNamed(context, '/restaurant',
+                                arguments: {
+                                  'name': "Joes's Burger",
+                                  'image': "assets/burger.png",
+                                  'description': "Good Quality Burgers",
+                                  'color': Colors.green.shade100,
+                                });
+                          },
                         ),
                         SizedBox(
                           height: adjustedHeight(20),
@@ -163,8 +172,17 @@ class _HomeState extends State<Home> {
                         SmallCard(
                           image: "assets/pizza.png",
                           cardColor: Colors.orange.shade100,
-                          name: "Sammy's Pizza",
+                          name: "Mario's Pizza",
                           description: "Best Pizzas",
+                          onTap: () {
+                            Navigator.pushNamed(context, '/restaurant',
+                                arguments: {
+                                  'name': "Joes's Burger",
+                                  'image': "assets/burger.png",
+                                  'description': "Good Quality Burgers",
+                                  'color': Colors.green.shade100,
+                                });
+                          },
                         ),
                         SizedBox(height: adjustedHeight(20)),
                         SmallCard(
@@ -172,6 +190,15 @@ class _HomeState extends State<Home> {
                           cardColor: Colors.yellow.shade100,
                           name: "Sushi Time",
                           description: "Taste the best",
+                          onTap: () {
+                            Navigator.pushNamed(context, '/restaurant',
+                                arguments: {
+                                  'name': "Joes's Burger",
+                                  'image': "assets/burger.png",
+                                  'description': "Good Quality Burgers",
+                                  'color': Colors.green.shade100,
+                                });
+                          },
                         ),
                         SizedBox(height: adjustedHeight(20)),
                         SmallCard(
@@ -179,6 +206,15 @@ class _HomeState extends State<Home> {
                           cardColor: Colors.purple.shade100,
                           name: "Salad Place",
                           description: "Eat Tasty Salads",
+                          onTap: () {
+                            Navigator.pushNamed(context, '/restaurant',
+                                arguments: {
+                                  'name': "Joes's Burger",
+                                  'image': "assets/burger.png",
+                                  'description': "Good Quality Burgers",
+                                  'color': Colors.green.shade100,
+                                });
+                          },
                         ),
                         SizedBox(height: adjustedHeight(20)),
                       ],
@@ -186,22 +222,52 @@ class _HomeState extends State<Home> {
                     Column(
                       children: [
                         LargeCard(
-                            image: "assets/curry.png",
-                            cardColor: Colors.pink.shade100,
-                            name: 'Namaste Pub',
-                            description: "Best Indian Food"),
+                          image: "assets/curry.png",
+                          cardColor: Colors.pink.shade100,
+                          name: 'Namaste Inn',
+                          description: "Best Indian Food",
+                          onTap: () {
+                            Navigator.pushNamed(context, '/restaurant',
+                                arguments: {
+                                  'name': "Joes's Burger",
+                                  'image': "assets/burger.png",
+                                  'description': "Good Quality Burgers",
+                                  'color': Colors.green.shade100,
+                                });
+                          },
+                        ),
                         SizedBox(height: adjustedHeight(20)),
                         LargeCard(
-                            image: "assets/noodle.png",
-                            cardColor: Colors.blue.shade100,
-                            name: 'Noodle Doodle',
-                            description: "Eat everyday"),
+                          image: "assets/noodle.png",
+                          cardColor: Colors.blue.shade100,
+                          name: 'Noodle Doodle',
+                          description: "Eat everyday",
+                          onTap: () {
+                            Navigator.pushNamed(context, '/restaurant',
+                                arguments: {
+                                  'name': "Joes's Burger",
+                                  'image': "assets/burger.png",
+                                  'description': "Good Quality Burgers",
+                                  'color': Colors.green.shade100,
+                                });
+                          },
+                        ),
                         SizedBox(height: adjustedHeight(20)),
                         LargeCard(
-                            image: "assets/taco.png",
-                            cardColor: Colors.red.shade100,
-                            name: 'Taco Bell',
-                            description: "Best Mexican Food"),
+                          image: "assets/taco.png",
+                          cardColor: Colors.red.shade100,
+                          name: 'Taco Bell',
+                          description: "Best Mexican Food",
+                          onTap: () {
+                            Navigator.pushNamed(context, '/restaurant',
+                                arguments: {
+                                  'name': "Joes's Burger",
+                                  'image': "assets/burger.png",
+                                  'description': "Good Quality Burgers",
+                                  'color': Colors.green.shade100,
+                                });
+                          },
+                        ),
                       ],
                     )
                   ],

@@ -9,12 +9,14 @@ class LargeCard extends StatelessWidget {
     required this.cardColor,
     required this.name,
     required this.description,
+    required this.onTap,
   }) : super(key: key);
 
   final String image;
   final Color cardColor;
   final String name;
   final String description;
+  final Function onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +80,7 @@ class LargeCard extends StatelessWidget {
           ],
         ),
       ),
-      onTap: () {},
+      onTap: () => onTap(),
     );
   }
 }
