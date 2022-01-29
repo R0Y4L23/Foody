@@ -17,27 +17,25 @@ class _HomeState extends State<Home> {
   final List<Map> _topList = [
     {
       'title': 'Pizza',
-      'image': 'https://www.freeiconspng.com/uploads/pizza-png-1.png',
+      'image': 'assets/pizza_p3.png',
       'subtitle':
           'Pizza is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough.',
     },
     {
       'title': 'Burger',
-      'image':
-          'https://www.freeiconspng.com/uploads/hamburger-burger-png-image-12.png',
+      'image': 'assets/burger.png',
       'subtitle':
           'A hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun.',
     },
     {
       'title': 'Noodles',
-      'image':
-          'https://www.freeiconspng.com/uploads/recipe-noodles-icons-10.png',
+      'image': 'assets/noodle.png',
       'subtitle':
           'Noodles is a type of food made from unleavened dough which has been stretched and formed into long, flat, cylindrical or layered sheets.',
     },
     {
       'title': 'Chicken',
-      'image': 'https://www.freeiconspng.com/uploads/italian-food-16.png',
+      'image': 'assets/indian_p3.png',
       'subtitle':
           'Chicken is a type of meat, which is the primary source of meat in many cuisines of the world.',
     },
@@ -72,12 +70,11 @@ class _HomeState extends State<Home> {
           backgroundColor: Colors.grey.shade50,
           title: Text(
             'Foody',
-            style: GoogleFonts.sedgwickAve(
-              textStyle: TextStyle(
-                fontSize: adjustedSize(25),
-                fontWeight: FontWeight.w600,
-                color: Colors.black,
-              ),
+            style: TextStyle(
+              fontSize: adjustedSize(25),
+              fontWeight: FontWeight.w600,
+              color: Colors.black,
+              fontFamily: "SedgwickAve",
             ),
           ),
           actions: [
@@ -163,6 +160,29 @@ class _HomeState extends State<Home> {
                                   'image': "assets/burger.png",
                                   'description': "Good Quality Burgers",
                                   'color': Colors.green.shade100,
+                                  'products': [
+                                    {
+                                      "image": "assets/burger_p1.png",
+                                      "name": "Large Burger",
+                                      "price": "Rs. 200",
+                                      "description":
+                                          "Large sized burger with extra cheese and mayo"
+                                    },
+                                    {
+                                      "image": "assets/burger_p2.png",
+                                      "name": "Medium Burger",
+                                      "price": "Rs. 150",
+                                      "description":
+                                          "Medium sized burger with two crispy chicken strips"
+                                    },
+                                    {
+                                      "image": "assets/burger_p3.png",
+                                      "name": "Small Burger",
+                                      "price": "Rs. 100",
+                                      "description":
+                                          "Small sized burger with cheese and vegetables"
+                                    }
+                                  ]
                                 });
                           },
                         ),
@@ -181,6 +201,29 @@ class _HomeState extends State<Home> {
                                   'image': "assets/pizza.png",
                                   'description': "Best Pizzas",
                                   'color': Colors.orange.shade100,
+                                  'products': [
+                                    {
+                                      "image": "assets/pizza_p1.png",
+                                      "name": "Large Pizza",
+                                      "price": "Rs. 200",
+                                      "description":
+                                          "Large sized pizza with extra cheese and mayo and mushroom toppings"
+                                    },
+                                    {
+                                      "image": "assets/pizza_p2.png",
+                                      "name": "Medium Pizza",
+                                      "price": "Rs. 150",
+                                      "description":
+                                          "Medium sized pizza with extra cheese and onion toppings"
+                                    },
+                                    {
+                                      "image": "assets/pizza_p3.png",
+                                      "name": "Small Pizza",
+                                      "price": "Rs. 100",
+                                      "description":
+                                          "Small sized pizza with tomato toppings"
+                                    }
+                                  ]
                                 });
                           },
                         ),
@@ -197,6 +240,29 @@ class _HomeState extends State<Home> {
                                   'image': "assets/sushi.png",
                                   'description': "Taste the best",
                                   'color': Colors.yellow.shade100,
+                                  'products': [
+                                    {
+                                      "image": "assets/sushi_p1.png",
+                                      "name": "Large Sushi",
+                                      "price": "Rs. 200",
+                                      "description":
+                                          "Large sized sushi with extra cheese and mayo and mushroom toppings"
+                                    },
+                                    {
+                                      "image": "assets/sushi_p2.png",
+                                      "name": "Medium Sushi",
+                                      "price": "Rs. 150",
+                                      "description":
+                                          "Medium sized sushi with extra cheese and onion toppings"
+                                    },
+                                    {
+                                      "image": "assets/sushi_p3.png",
+                                      "name": "Small Sushi",
+                                      "price": "Rs. 100",
+                                      "description":
+                                          "Small sized sushi with tomato toppings"
+                                    }
+                                  ]
                                 });
                           },
                         ),
@@ -213,6 +279,29 @@ class _HomeState extends State<Home> {
                                   'image': "assets/salad.png",
                                   'description': "Eat Tasty Salads",
                                   'color': Colors.purple.shade100,
+                                  'products': [
+                                    {
+                                      "image": "assets/salad_p1.png",
+                                      "name": "Large Salad",
+                                      "price": "Rs. 200",
+                                      "description":
+                                          "Large sized salad with extra cheese and mayo and mushroom toppings"
+                                    },
+                                    {
+                                      "image": "assets/salad_p2.png",
+                                      "name": "Medium Salad",
+                                      "price": "Rs. 150",
+                                      "description":
+                                          "Medium sized salad with extra cheese and onion toppings"
+                                    },
+                                    {
+                                      "image": "assets/salad_p3.png",
+                                      "name": "Small Salad",
+                                      "price": "Rs. 100",
+                                      "description":
+                                          "Small sized salad with tomato toppings"
+                                    }
+                                  ]
                                 });
                           },
                         ),
@@ -233,6 +322,29 @@ class _HomeState extends State<Home> {
                                   'image': "assets/curry.png",
                                   'description': "Best Indian Food",
                                   'color': Colors.pink.shade100,
+                                  'products': [
+                                    {
+                                      "image": "assets/indian_p1.png",
+                                      "name": "Large Curry",
+                                      "price": "Rs. 200",
+                                      "description":
+                                          "Large sized curry with extra cheese and mayo and mushroom toppings"
+                                    },
+                                    {
+                                      "image": "assets/indian_p2.png",
+                                      "name": "Medium Curry",
+                                      "price": "Rs. 150",
+                                      "description":
+                                          "Medium sized curry with extra cheese and onion toppings"
+                                    },
+                                    {
+                                      "image": "assets/indian_p3.png",
+                                      "name": "Small Curry",
+                                      "price": "Rs. 100",
+                                      "description":
+                                          "Small sized curry with tomato toppings"
+                                    }
+                                  ]
                                 });
                           },
                         ),
@@ -249,6 +361,29 @@ class _HomeState extends State<Home> {
                                   'image': "assets/noodle.png",
                                   'description': "Eat everyday",
                                   'color': Colors.blue.shade100,
+                                  'products': [
+                                    {
+                                      "image": "assets/noodles_p1.png",
+                                      "name": "Large Noodle",
+                                      "price": "Rs. 200",
+                                      "description":
+                                          "Large sized noodle with extra cheese and mayo and mushroom toppings"
+                                    },
+                                    {
+                                      "image": "assets/noodles_p2.png",
+                                      "name": "Medium Noodle",
+                                      "price": "Rs. 150",
+                                      "description":
+                                          "Medium sized noodle with extra cheese and onion toppings"
+                                    },
+                                    {
+                                      "image": "assets/noodles_p3.png",
+                                      "name": "Small Noodle",
+                                      "price": "Rs. 100",
+                                      "description":
+                                          "Small sized noodle with tomato toppings"
+                                    }
+                                  ]
                                 });
                           },
                         ),
@@ -265,6 +400,29 @@ class _HomeState extends State<Home> {
                                   'image': "assets/taco.png",
                                   'description': "Best Mexican Food",
                                   'color': Colors.red.shade100,
+                                  'products': [
+                                    {
+                                      "image": "assets/taco_p1.png",
+                                      "name": "Large Taco",
+                                      "price": "Rs. 200",
+                                      "description":
+                                          "Large sized taco with extra cheese and mayo and mushroom toppings"
+                                    },
+                                    {
+                                      "image": "assets/taco_p2.png",
+                                      "name": "Medium Taco",
+                                      "price": "Rs. 150",
+                                      "description":
+                                          "Medium sized taco with extra cheese and onion toppings"
+                                    },
+                                    {
+                                      "image": "assets/taco_p3.png",
+                                      "name": "Small Taco",
+                                      "price": "Rs. 100",
+                                      "description":
+                                          "Small sized taco with tomato toppings"
+                                    }
+                                  ]
                                 });
                           },
                         ),

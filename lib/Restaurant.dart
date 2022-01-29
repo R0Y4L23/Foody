@@ -35,6 +35,8 @@ class _RestaurantState extends State<Restaurant> {
     final args =
         ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
 
+    List products = args["products"];
+
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -49,13 +51,12 @@ class _RestaurantState extends State<Restaurant> {
           backgroundColor: Colors.grey.shade50,
           title: Text(
             'RESTAURANT',
-            style: GoogleFonts.raleway(
-              textStyle: TextStyle(
-                fontSize: adjustedSize(12),
-                fontWeight: FontWeight.w600,
-                color: Colors.black,
-                letterSpacing: 1.5,
-              ),
+            style: TextStyle(
+              fontSize: adjustedSize(12),
+              fontWeight: FontWeight.w600,
+              color: Colors.black,
+              letterSpacing: 1.5,
+              fontFamily: "Raleway",
             ),
           ),
           actions: [
@@ -101,7 +102,7 @@ class _RestaurantState extends State<Restaurant> {
                       right: 0,
                       child: Image(
                         image: AssetImage(args["image"]),
-                        height: adjustedHeight(140),
+                        height: adjustedHeight(125),
                       ),
                     ),
                     Positioned(
@@ -131,23 +132,21 @@ class _RestaurantState extends State<Restaurant> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text("OPEN (10:00 AM - 11:00 PM)",
-                                  style: GoogleFonts.raleway(
-                                    textStyle: TextStyle(
-                                      fontSize: adjustedSize(12),
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.green,
-                                      letterSpacing: 1.5,
-                                    ),
+                                  style: TextStyle(
+                                    fontSize: adjustedSize(12),
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.green,
+                                    letterSpacing: 1.5,
+                                    fontFamily: "Raleway",
                                   )),
                               SizedBox(height: adjustedHeight(5)),
                               Text("CLOSED (Thu - Sat)",
-                                  style: GoogleFonts.raleway(
-                                    textStyle: TextStyle(
-                                      fontSize: adjustedSize(12),
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.red,
-                                      letterSpacing: 1.5,
-                                    ),
+                                  style: TextStyle(
+                                    fontSize: adjustedSize(12),
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.red,
+                                    letterSpacing: 1.5,
+                                    fontFamily: "Raleway",
                                   )),
                               SizedBox(height: adjustedHeight(5)),
                               Text(
@@ -159,10 +158,10 @@ class _RestaurantState extends State<Restaurant> {
                               SizedBox(height: adjustedHeight(5)),
                               Text(
                                 args["description"],
-                                style: GoogleFonts.dancingScript(
-                                    textStyle: TextStyle(
-                                        fontSize: adjustedSize(20),
-                                        fontWeight: FontWeight.bold)),
+                                style: TextStyle(
+                                    fontSize: adjustedSize(20),
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "DancingScript"),
                               ),
                             ],
                           )),
@@ -181,10 +180,20 @@ class _RestaurantState extends State<Restaurant> {
                     ),
                   )),
               SizedBox(height: adjustedHeight(20)),
-              RestaurantItemCard(),
-              RestaurantItemCard(),
-              RestaurantItemCard(),
-              RestaurantItemCard(),
+              Container(
+                height: adjustedHeight(400),
+                child: ListView.builder(
+                  itemCount: products.length,
+                  itemBuilder: (context, index) {
+                    return RestaurantItemCard(
+                      image: products[index]["image"],
+                      name: products[index]["name"],
+                      price: products[index]["price"],
+                      description: products[index]["description"],
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         )));

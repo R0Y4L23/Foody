@@ -45,14 +45,15 @@ class TopCard extends StatelessWidget {
           children: [
             Positioned(
               bottom: 0,
-              left: 0,
-              child: Image.network(
-                cardImage,
+              left: adjustedWidth(10),
+              child: Image(
+                image: AssetImage(cardImage),
                 height: adjustedHeight(80),
+                width: adjustedWidth(80),
               ),
             ),
             Positioned(
-                width: adjustedWidth(200),
+                width: adjustedWidth(220),
                 top: adjustedHeight(8),
                 right: adjustedWidth(8),
                 child: Column(

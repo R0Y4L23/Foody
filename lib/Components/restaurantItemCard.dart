@@ -3,7 +3,18 @@
 import "package:flutter/material.dart";
 
 class RestaurantItemCard extends StatelessWidget {
-  const RestaurantItemCard({Key? key}) : super(key: key);
+  const RestaurantItemCard(
+      {Key? key,
+      required this.image,
+      required this.name,
+      required this.price,
+      required this.description})
+      : super(key: key);
+
+  final String image;
+  final String name;
+  final String description;
+  final String price;
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +47,9 @@ class RestaurantItemCard extends StatelessWidget {
                 color: Colors.grey.shade100,
                 borderRadius: BorderRadius.circular(adjustedHeight(10))),
             child: Image(
-              image: AssetImage("assets/burger.png"),
+              image: AssetImage(image),
               height: adjustedHeight(100),
+              width: adjustedWidth(60),
             ),
           ),
           SizedBox(width: adjustedWidth(20)),
@@ -47,13 +59,13 @@ class RestaurantItemCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Large Sized Burger",
+                  name,
                   style: TextStyle(
                       fontSize: adjustedSize(20), fontWeight: FontWeight.w600),
                 ),
                 SizedBox(height: adjustedHeight(10)),
                 Text(
-                  "Large Size Burger with Cheese , Mayo , Vegetables and Bacon and more",
+                  description,
                   style: TextStyle(
                       fontSize: adjustedSize(10),
                       color: Colors.grey,
@@ -61,7 +73,7 @@ class RestaurantItemCard extends StatelessWidget {
                 ),
                 SizedBox(height: adjustedHeight(10)),
                 Text(
-                  "\$25.00",
+                  price,
                   style: TextStyle(
                       fontSize: adjustedSize(15),
                       color: Colors.red,
